@@ -1,0 +1,48 @@
+.message_card
+{
+    padding: 10px;
+    width: fit-content;
+    margin: 20px;
+    background-color: rgb(228, 228, 228) !important;
+    position: relative;
+    max-width: 500px;
+    transform: translateX(200%);
+    transition: 0.8s !important;
+    opacity: 0;
+
+}
+.right{
+    margin-left: auto;
+    background-image: linear-gradient(90deg,rgb(56, 145, 247) , rgb(85, 112, 251), rgb(56, 145, 247));
+    transform: translateX(-200%);
+    transition: 0.8s !important;
+    
+}
+.message_content
+{
+    background-color: transparent;
+}
+.timestamp
+{
+    font-size: 11px;
+    display: flex;
+}
+.right_timestamp
+{
+    justify-content: end;
+}
+
+@media (max-width:991px)
+{
+    .message_content
+    {
+        font-size: 20px;
+    }
+}
+@media (max-width:441px)
+{
+    .message_content
+    {
+        font-size: 14px;
+    }
+}

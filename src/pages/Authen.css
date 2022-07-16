@@ -1,0 +1,58 @@
+.authentication
+{
+    width: 100vw;
+    height: 100vh;
+    min-width: fit-content;
+    min-height: fit-content;
+    display: grid;
+    place-items: center;
+    background: black;
+}
+.sign_in_container,.sign_up_container
+{
+position: fixed;
+width: 100%;
+height: 100%;
+max-width: 500px;
+max-height: 450px;
+opacity: 0;
+}
+
+.sign_in_container{
+    transform: translateX(-100%);
+    transition: 0.7s;
+}
+.sign_up_container{
+    transform: translateX(100%);
+    transition: 0.7s;
+}
+
+.sign_in_form,.sign_up_form
+{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+background-color: rgb(30, 30, 30);
+border-radius: 15px;
+height: 100%;
+padding: 30px;
+}
+.form_input
+{
+    background-color: rgba(203, 203, 203, 0.3);
+    font-size: 20px !important;
+    width: 90%;
+    color: rgb(0, 0, 0) !important;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding-left: 30px;
+}
+.form_button
+{
+    margin-top: 25px !important;
+    color: white !important;
+    background-image: linear-gradient(90deg,rgb(56, 145, 247) , rgb(85, 112, 251), rgb(56, 145, 247)) !important;
+}

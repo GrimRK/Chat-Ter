@@ -1,0 +1,161 @@
+.chatapp
+{
+    position: relative;
+    width: 100%;
+    min-height: fit-content;
+    height: 100vh;
+    background-color: rgb(30, 30, 30);
+}
+.chats
+{
+    background-color: bisque;
+}
+.button_container
+{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    align-items: center;
+    background-image: linear-gradient(90deg,rgb(56, 145, 247) , rgb(85, 112, 251), rgb(56, 145, 247));
+    border-bottom: 1px solid black;
+}
+
+.logout_btn
+{
+    color: white !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    margin-left: 10px !important;
+    background-image: linear-gradient(90deg,rgb(56, 145, 247) , rgb(85, 112, 251), rgb(56, 145, 247));
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 16px !important;
+    margin-top: 25px !important;
+    
+}
+.add_btn{
+    color: rgb(103, 103, 103);
+    background-color: white;
+    border-radius: 100px;
+    font-size: 50px!important;
+    margin-right: 10px;
+    border: 2px solid rgb(31,31,31);
+    cursor: pointer;
+}
+.chats_container
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.chat_avatar
+{
+    height: 50px !important;
+    width: 50px !important;
+    font-size: 34px !important;
+    border: 2px solid white;
+}
+.chat_cell
+{
+    color: white;
+
+    width: 95%;
+    margin-top: 10px;
+    background-color: rgb(53, 53, 53);
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    cursor: pointer;
+}
+.chat_cell>h1{
+    margin-left: 10px;
+}
+
+.chat_list
+{
+    position: sticky !important;
+    top: 0;
+    background-image: linear-gradient(90deg,rgb(56, 145, 247) , rgb(85, 112, 251), rgb(56, 145, 247));
+    z-index: 10;
+    border-bottom: 1px solid #515151;
+}
+.back_icon
+{
+    background-color: white;
+    border-radius: 100px;
+    font-size: 50px !important;
+    border: 2px solid rgb(31,31,31);
+    cursor: pointer;
+}
+.chat_name
+{
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    margin-left: 20px;
+    color: white;
+    
+}
+.members_list
+{
+    width: 100vw;
+    max-width: 250px;
+}
+.member_text
+{
+    font-size: 24px !important;
+}
+.account_icon
+{
+    font-size: 50px !important;
+    color: white;
+}
+.drawer {
+    background-color: rgb(30,30,30) !important;
+    height: 100%;
+    color: white;
+
+}
+.drawer_input
+{
+    color: rgb(230,230,230) !important; 
+}
+.user_icon
+{
+    color: white !important;
+}
+.add_icon{
+    font-size: 28px !important;
+    border-radius: 100px;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width:991px)
+{
+    .chat_name
+    {
+        font-size: 28px !important;
+        margin-left: 0.4%;
+    }
+    .back_icon{
+        font-size: 40px !important; 
+    }
+
+    .chat_avatar{
+        height: 40px !important;
+        width: 40px !important;
+        font-size: 26px !important;
+    }
+    .chat_cell{
+        font-size: 14px !important;
+    }
+
+    .add_btn{
+        font-size: 40px !important;
+    }
+}
