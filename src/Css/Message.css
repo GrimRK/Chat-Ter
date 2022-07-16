@@ -1,12 +1,13 @@
+
 .message_card
 {
     padding: 10px;
     width: fit-content;
-    margin: 20px;
+    margin: 20px ;
     background-color: rgb(228, 228, 228) !important;
     position: relative;
-    max-width: 500px;
-    transform: translateX(200%);
+    max-width: 500px !important;
+    transform: translateX(100%);
     transition: 0.8s !important;
     opacity: 0;
 
@@ -14,7 +15,7 @@
 .right{
     margin-left: auto;
     background-image: linear-gradient(90deg,rgb(56, 145, 247) , rgb(85, 112, 251), rgb(56, 145, 247));
-    transform: translateX(-200%);
+    transform: translateX(-100%);
     transition: 0.8s !important;
     
 }
@@ -31,7 +32,34 @@
 {
     justify-content: end;
 }
-
+.chat_image,.chat_video
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+.video_container
+{
+    position: relative;
+}
+.pause{
+   
+    opacity: 0 !important;
+}
+.play_btn
+{
+    transition: 500ms !important;
+    color: #222222;
+    opacity: 0.8;
+    font-size: 100px !important;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 38px);
+}
 @media (max-width:991px)
 {
     .message_content
@@ -45,4 +73,18 @@
     {
         font-size: 14px;
     }
+    .chat_image,.chat_video
+    {
+
+        max-width: 160px;
+        max-height: 300px;
+
+    }
+.play_btn
+{
+    font-size: 60px !important;
+
+    top: calc(50% - 30px);
+    left: calc(50% - 24px);
+}
 }
