@@ -307,7 +307,7 @@ function ChatApp() {
       </div>
 
       <Drawer open={openLeft} anchor="right" onClose={() => setOpenLeft(false)}>
-        <div className="drawer">
+        <div className="additional_drawer">
           <List>
             <ListItem onClick={() => setOpenLeft(false)}>
               <ListItemIcon>
@@ -425,63 +425,67 @@ function ChatApp() {
         anchor="right"
         onClose={() => setOpenGroupInfo(false)}
       >
-        <List className="chat_list">
-          <ListItem>
-            <ListItemIcon>
-              <KeyboardArrowRight
-                className="back_icon"
-                fontSize="large"
-                onClick={() => setOpenGroupInfo(false)}
-              />
-            </ListItemIcon>
-          </ListItem>
-        </List>
-        <List className="members_list drawer">
-          <Divider color="white"></Divider>
-          <ListItem>Members</ListItem>
-          <Divider color="white"></Divider>
-          {chatInfo?.members?.map((member) => {
-            return (
-              <ListItem key={member}>
-                <ListItemIcon>
-                  <Person className="user_icon" />
-                </ListItemIcon>
-                <ListItemText>
-                  <p className="member_text">{member}</p>
-                </ListItemText>
-                {isInChat(member) ? (
-                  ""
-                ) : (
-                  <ListItemIcon onClick={() => handleAdd(member)}>
-                    <Add className="add_icon" fontSize="small"></Add>
+        <div className="additional_drawer">
+          <List className="chat_list">
+            <ListItem>
+              <ListItemIcon>
+                <KeyboardArrowRight
+                  className="back_icon"
+                  fontSize="large"
+                  onClick={() => setOpenGroupInfo(false)}
+                />
+              </ListItemIcon>
+            </ListItem>
+          </List>
+          <List className="members_list drawer">
+            <Divider color="white"></Divider>
+            <ListItem>Members</ListItem>
+            <Divider color="white"></Divider>
+            {chatInfo?.members?.map((member) => {
+              return (
+                <ListItem key={member}>
+                  <ListItemIcon>
+                    <Person className="user_icon" />
                   </ListItemIcon>
-                )}
-              </ListItem>
-            );
-          })}
-          <Divider color="white"></Divider>
-          <ListItem>Add Members</ListItem>
-          <Divider color="white"></Divider>
-          {chats?.map((ele) => {
-            if (ele.type === "chat") {
-              const flag = chatInfo?.members?.find((item) => item === ele.name);
-              if (!flag) {
-                return (
-                  <ListItem key={ele.name}>
-                    <ListItemText>
-                      <p className="member_text">{ele.name}</p>
-                    </ListItemText>
-                    <ListItemIcon
-                      onClick={() => handleAddMember(ele.name, chatInfo)}
-                    >
+                  <ListItemText>
+                    <p className="member_text">{member}</p>
+                  </ListItemText>
+                  {isInChat(member) ? (
+                    ""
+                  ) : (
+                    <ListItemIcon onClick={() => handleAdd(member)}>
                       <Add className="add_icon" fontSize="small"></Add>
                     </ListItemIcon>
-                  </ListItem>
+                  )}
+                </ListItem>
+              );
+            })}
+            <Divider color="white"></Divider>
+            <ListItem>Add Members</ListItem>
+            <Divider color="white"></Divider>
+            {chats?.map((ele) => {
+              if (ele.type === "chat") {
+                const flag = chatInfo?.members?.find(
+                  (item) => item === ele.name
                 );
+                if (!flag) {
+                  return (
+                    <ListItem key={ele.name}>
+                      <ListItemText>
+                        <p className="member_text">{ele.name}</p>
+                      </ListItemText>
+                      <ListItemIcon
+                        onClick={() => handleAddMember(ele.name, chatInfo)}
+                      >
+                        <Add className="add_icon" fontSize="small"></Add>
+                      </ListItemIcon>
+                    </ListItem>
+                  );
+                }
               }
-            }
-          })}
-        </List>
+            })}
+          </List>
+        </div>
       </Drawer>
     </div>
   );

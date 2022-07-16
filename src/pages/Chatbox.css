@@ -6,9 +6,9 @@ body{
 {
     position: relative;
     background-color: rgb(30,30,30);
-    min-height: fit-content;
+    overflow: hidden;
     width: 100vw;
-    
+    min-height: calc(100vh - 110px);
 }
 .send_form
 {
@@ -17,7 +17,7 @@ body{
     padding: 10px;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     position: fixed;
     z-index: 2;
     bottom: 0;
@@ -40,13 +40,15 @@ border-radius: 100px;
 .send_icon{
     font-size: 40px !important;
     border-radius: 100px !important;
+    width: 100%;
+    
 }
 .messages_container
 {
 
     position: relative;
     margin-bottom: 70px;
-
+    width: 100%;
 
 }
 .bottomreference
@@ -55,6 +57,23 @@ border-radius: 100px;
     height: 40px;
     width: 100%;
     opacity: 0;
+}
+.file_upload
+{
+    display: none;
+}
+.hidden_toggle
+{
+    display: none !important;
+}
+.add_file_btn
+{
+    font-size: 50px !important;
+    cursor: pointer;
+}
+.progress_circle
+{
+    color: white !important; 
 }
 @media (max-width:991px)
 {
